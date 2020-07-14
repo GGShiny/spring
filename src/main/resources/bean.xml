@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--<bean id="accountDao" class="com.thought.it.dao.impl.AccountDao"></bean>-->
+
+    <!--<bean id="accountService" class="com.thought.it.service.impl.AccountService"></bean>-->
+
+    <!-- 配置spring在创建容器时要扫描的包，配置所需要的约束不是在beans标签中，而是在context的名称空间中 -->
+    <context:component-scan base-package="com.thought.it"></context:component-scan>
+
+</beans>
