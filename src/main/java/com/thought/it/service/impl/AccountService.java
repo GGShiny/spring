@@ -15,9 +15,10 @@ import java.util.List;
  * @date: 2020/7/13
  * @description:
  */
-//@Service
+@Service
 public class AccountService implements IAccountService {
 
+    @Autowired
     private AccountDao accountDao;
 
     public void setAccountDao(AccountDao accountDao) {
