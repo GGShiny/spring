@@ -40,4 +40,4 @@ xml实现方式
 
 < font color=red>以上三个注解注入的bean对象类型只能是其他bean类型，不能注入基本类型和String类型，集合类型的注入只能是xml实现。
 
-@Value：用于注入基本类型和String类型。属性：value，可以使用spring中的spel表达式注入：${表达式}
+@Value：用于注入基本类型和String类型。属性：value，可以使用spring中的spel表达式注入：${表达式} 
