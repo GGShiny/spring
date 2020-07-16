@@ -19,23 +19,23 @@
         <!--<property name="runner" ref="runner"></property>-->
     <!--</bean>-->
 
-    <!-- 配置spring在创建容器时要扫描的包，配置所需要的约束不是在beans标签中，而是在context的名称空间中 -->
-    <context:component-scan base-package="com.thought.it"></context:component-scan>
+    <!--&lt;!&ndash; 配置spring在创建容器时要扫描的包，配置所需要的约束不是在beans标签中，而是在context的名称空间中 &ndash;&gt;-->
+    <!--<context:component-scan base-package="com.thought.it"></context:component-scan>-->
 
-    <!-- 配置QueryRunner对象 -->
-    <bean id="runner" class="org.apache.commons.dbutils.QueryRunner">
-        <!-- 注入数据源 -->
-        <constructor-arg name="ds" ref="dataSource" />
-    </bean>
+    <!--&lt;!&ndash; 配置QueryRunner对象 &ndash;&gt;-->
+    <!--<bean id="runner" class="org.apache.commons.dbutils.QueryRunner">-->
+        <!--&lt;!&ndash; 注入数据源 &ndash;&gt;-->
+        <!--<constructor-arg name="ds" ref="dataSource" />-->
+    <!--</bean>-->
 
-    <!--配置c3p0 -->
-    <bean name="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <!-- 配置数据库连接 -->
-        <property name="driverClass" value="com.mysql.jdbc.Driver" />
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/spring" />
-        <property name="user" value="root" />
-        <property name="password" value="123456" />
-    </bean>
+    <!--&lt;!&ndash;配置c3p0 &ndash;&gt;-->
+    <!--<bean name="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">-->
+        <!--&lt;!&ndash; 配置数据库连接 &ndash;&gt;-->
+        <!--<property name="driverClass" value="com.mysql.jdbc.Driver" />-->
+        <!--<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/spring" />-->
+        <!--<property name="user" value="root" />-->
+        <!--<property name="password" value="123456" />-->
+    <!--</bean>-->
 
 
 
