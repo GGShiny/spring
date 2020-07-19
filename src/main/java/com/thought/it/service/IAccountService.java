@@ -15,7 +15,7 @@ public interface IAccountService {
      * 查询所有
      * @return
      */
-    List<Account> finadAllAccount();
+    List<Account> findAllAccount();
 
     /**
      * 根据id进行查询
@@ -40,4 +40,13 @@ public interface IAccountService {
      * @param accountId
      */
     void deleteAccount(Integer accountId);
+
+    /**
+     * 转账
+     * @param sourceName
+     * @param targetName
+     * @param money
+     */
+    void transfer(String sourceName, String targetName, Float money);
+
 }

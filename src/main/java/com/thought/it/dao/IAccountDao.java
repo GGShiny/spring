@@ -14,7 +14,7 @@ public interface IAccountDao {
      * 查询所有
      * @return
      */
-    List<Account> finadAllAccount();
+    List<Account> findAllAccount();
 
     /**
      * 根据id进行查询
@@ -39,4 +39,12 @@ public interface IAccountDao {
      * @param accountId
      */
     void deleteAccount(Integer accountId);
+
+    /**
+     * 根据名称查询账户
+     * @param accountName
+     * @return
+     */
+    Account findByName(String accountName);
+
 }

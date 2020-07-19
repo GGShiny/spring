@@ -26,7 +26,7 @@ public class AccountDao implements IAccountDao {
         this.runner = runner;
     }
 
-    public List<Account> finadAllAccount() {
+    public List<Account> findAllAccount() {
         List<Account> query = null;
         try {
             query = runner.query("select * from account", new BeanListHandler<Account>(Account.class));
@@ -69,4 +69,21 @@ public class AccountDao implements IAccountDao {
             throw  new RuntimeException(e);
         }
     }
+
+    public Account findByName(String accountName) {
+        try{
+            List<Account> query = runner.query("select * from account where name = ?", new BeanListHandler<Account>(Account.class), accountName);
+            if (query.size() == 0 || query == null){
+                return null;
+            }
+            if (query.size() > 1){
+                throw new RuntimeException("返回结果不止一个，数据错误");
+            }
+            return query.get(0);
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+    }
+
+
 }

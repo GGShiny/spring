@@ -30,9 +30,14 @@ public class AccountServiceTest {
 //        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("bean.xml");
 //        AnnotationConfigApplicationContext classPathXmlApplicationContext = new AnnotationConfigApplicationContext(SpringConfiguration.class);
 //        AccountService accountService = classPathXmlApplicationContext.getBean("accountService", AccountService.class);
-        List<Account> accounts = accountService.finadAllAccount();
+        List<Account> accounts = accountService.findAllAccount();
         for (Account account : accounts){
             System.out.println(account);
         }
+    }
+
+    @Test
+    public void testTransfer(){
+        accountService.transfer("aaa","bbb", 100f);
     }
 }
